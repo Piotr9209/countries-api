@@ -1,0 +1,84 @@
+.headerLight {
+    background-color: #ffffff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
+    margin: 0 0;
+    min-width: 375px;
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    div {
+        padding: 40px 3%;
+        &:first-of-type {
+            h1 {
+                font-weight: 800;
+                font-style: normal;
+                font-size: 14px;
+                line-height: 20px;
+                color: #111517;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+        }
+        &:last-of-type {
+            button {
+                display: inline-block;
+                border: none;
+                text-decoration: none;
+                font-size: 14px;
+                padding: 5px 16px;
+                background-color: #ffffff;
+                color: #111517;
+                &:hover {
+                    cursor: pointer;
+                }
+                .bsMoon {
+                    margin-right: 10px;
+                    color: #111517;
+                }
+            }
+        }
+    }
+}
+
+.headerDark {
+    background-color: #2b3844;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
+    margin: 0 0;
+    min-width: 375px;
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    div {
+        padding: 40px 3%;
+        &:first-of-type {
+            h1 {
+                font-weight: 800;
+                font-style: normal;
+                font-size: 14px;
+                line-height: 20px;
+                color: #ffffff;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+        }
+        &:last-of-type {
+            button {
+                display: inline-block;
+                border: none;
+                text-decoration: none;
+                font-size: 14px;
+                padding: 5px 16px;
+                background-color: #2b3844;
+                color: #ffffff;
+                &:hover {
+                    cursor: pointer;
+                }
+                .bsMoon {
+                    margin-right: 10px;
+                    color: #ffffff;
+                    border: none;
+                }
+            }
+        }
+    }
+}

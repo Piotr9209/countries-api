@@ -8,11 +8,13 @@ export const getCountries = createAsyncThunk(
     }
 );
 
-const countriesSlice = createSlice({
+
+
+export const countriesSlice = createSlice({
     name: 'countries',
     initialState: {
         countries: [],
-        status: null,
+        statusCountries: null,
         isDarkMode: false,
         isSend: true,
     },
@@ -26,19 +28,57 @@ const countriesSlice = createSlice({
     },
     extraReducers: {
         [getCountries.pending]: (state) => {
-            state.status = 'loading';
+            state.statusCountries = 'loading';
         },
         [getCountries.fulfilled]: (state, action) => {
-            state.status = 'success';
+            state.statusCountries = 'success';
             state.countries = action.payload;
         },
         [getCountries.rejected]: (state) => {
-            state.status = 'failed';
-        }
+            state.statusCountries = 'failed';
+        },
+
     }
 });
 
+export const getCountry = createAsyncThunk(
+    "country/getCountry",
+    async (url) => {
+        // const { dispatch } = thunkAPI;
+        if (!url) {
+            return;
+        } else {
+            return await fetch(url).then(res => res.json());
+        }
+    }
+);
+
+export const countrySlice = createSlice({
+    name: 'country',
+    initialState: {
+        country: [],
+        statusCountry: null,
+    },
+    reducers: {
+        clearArrayCountry: (state) => {
+            state.country = [];
+        }
+    },
+    extraReducers: {
+        [getCountry.pending]: (state) => {
+            state.statusCountry = 'loading'
+        },
+        [getCountry.fulfilled]: (state, action) => {
+            state.statusCountry = 'success';
+            state.country = action.payload;
+        },
+        [getCountry.rejected]: (state) => {
+            state.statusCountry = 'failed';
+        },
+    }
+})
+
 
 export const { toggleDarkMode, toggleIsSendInput } = countriesSlice.actions;
-export default countriesSlice;
+export const { clearArrayCountry } = countrySlice.actions;
 
