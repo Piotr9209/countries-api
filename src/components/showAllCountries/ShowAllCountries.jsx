@@ -10,21 +10,23 @@ export const ShowAllCountries = ({ handleSubmitSearchCountry, handleChangeSearch
 
     return (
         <div className={isDarkMode ? 'allCountriesDark' : 'allCountriesLight'}>
-            <div className='formCountries'>
-                <form onSubmit={handleSubmitSearchCountry}>
-                    <i><BsSearch /></i> <input type="search" placeholder="Search for a country..." onChange={handleChangeSearchCountry} />
-                </form>
-                {!isSend && <p className='wrongCountryInput'>too small characters</p>}
-            </div>
-            <div className='selectRegionCountry'>
-                <select onChange={handleDropdownFilterRegion}>
-                    <option value="all">All</option>
-                    <option value="africa">Africa</option>
-                    <option value="americas">Americas</option>
-                    <option value="asia">Asia</option>
-                    <option value="europe">Europe</option>
-                    <option value="oceania">Oceania</option>
-                </select>
+            <div className='containerFormCountries'>
+                <div className='formCountries'>
+                    <form onSubmit={handleSubmitSearchCountry}>
+                        <i><BsSearch /></i> <input type="search" placeholder="Search for a country..." onChange={handleChangeSearchCountry} />
+                    </form>
+                    {!isSend && <p className='wrongCountryInput'>too small characters</p>}
+                </div>
+                <div className='selectRegionCountry'>
+                    <select onChange={handleDropdownFilterRegion}>
+                        <option value="all">All</option>
+                        <option value="africa">Africa</option>
+                        <option value="americas">Americas</option>
+                        <option value="asia">Asia</option>
+                        <option value="europe">Europe</option>
+                        <option value="oceania">Oceania</option>
+                    </select>
+                </div>
             </div>
             <div className='listOfCountries'>
                 {statusCountries === 'success' && countries.map((country) => {

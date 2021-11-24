@@ -1,0 +1,31 @@
+.loadingLight {
+    width: 92%;
+    min-height: 100vh;
+    margin: 0 4%;
+    position: relative;
+    @media screen and (min-width: 1180px) {
+        margin: 0 5%;
+    }
+    .loader {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.loadingDark {
+    width: 92%;
+    min-height: 100vh;
+    margin: 0 4%;
+    position: relative;
+    @media screen and (min-width: 1180px) {
+        margin: 0 5%;
+    }
+    .loader {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

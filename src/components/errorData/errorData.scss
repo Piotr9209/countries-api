@@ -1,0 +1,125 @@
+.errorLight {
+    width: 92%;
+    min-height: 100vh;
+    margin: 0 4%;
+    position: relative;
+    @media screen and (min-width: 1180px) {
+        margin: 0 5%;
+    }
+    .buttonBack {
+        width: 100%;
+        padding-top: 30px;
+        @media screen and (min-width: 1180px) {
+            padding-top: 40px;
+        }
+        button {
+            width: 104px;
+            height: 32px;
+            border: none;
+            background: #ffffff;
+            box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.293139);
+            border-radius: 2px;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 20px;
+            color: #111517;
+            margin-top: auto;
+            margin-bottom: auto;
+            cursor: pointer;
+            .biArrowBack {
+                font-size: 14px;
+                line-height: 20px;
+                color: #111517;
+                padding-right: 5px;
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+        }
+    }
+    .errorMessage {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #111517;
+        h1 {
+            font-size: 34px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            @media screen and (min-width: 1180px) {
+                font-size: 54px;
+            }
+        }
+        p {
+            font-size: 26px;
+            font-weight: 500;
+            @media screen and (min-width: 1180px) {
+                font-size: 48px;
+            }
+        }
+    }
+}
+
+.errorDark {
+    width: 92%;
+    min-height: 100vh;
+    margin: 0 4%;
+    position: relative;
+    @media screen and (min-width: 1180px) {
+        margin: 0 5%;
+    }
+    .buttonBack {
+        width: 100%;
+        padding-top: 30px;
+        @media screen and (min-width: 1180px) {
+            padding-top: 40px;
+        }
+        button {
+            width: 104px;
+            height: 32px;
+            border: none;
+            background: #2b3844;
+            box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.293139);
+            border-radius: 2px;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 20px;
+            color: #ffffff;
+            margin-top: auto;
+            margin-bottom: auto;
+            cursor: pointer;
+            .biArrowBack {
+                font-size: 14px;
+                line-height: 20px;
+                color: #ffffff;
+                padding-right: 5px;
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+        }
+    }
+    .errorMessage {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #ffffff;
+        h1 {
+            font-size: 34px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            @media screen and (min-width: 1180px) {
+                font-size: 54px;
+            }
+        }
+        p {
+            font-size: 26px;
+            font-weight: 500;
+            @media screen and (min-width: 1180px) {
+                font-size: 48px;
+            }
+        }
+    }
+}
